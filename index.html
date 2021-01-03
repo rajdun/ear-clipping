@@ -1,0 +1,72 @@
+<!--
+    Ear clipping algorithm visualisation made in js
+-->
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Algorytm ear clipping - wizualizacja</title>
+    <script src="p5.js"></script>
+    <script src="UI.js"></script>
+    <script src="Line.js"></script>
+    <script src="default.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Polygon.js"></script>
+    <script src="functions.js"></script>
+    <script src="main.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            overflow: hidden;
+            font-family: 'Roboto', sans-serif;
+        }
+        #ui {
+            position: fixed;
+            padding: 5px;
+        }
+        #ui-main {
+            background-color: #353b48;
+            color: white;
+            padding: 5px;
+        }
+        hr{
+            margin: 5px 0px;
+        }
+        #menuButton {
+            width: 100%;
+        }
+        .hidden{
+            display: none;
+        }
+        .visible{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="ui">
+        <div id="ui-main">
+            <h4>Ustawienia</h4>
+            Prędkość animacji:
+            <input type="range" id="sleepTime" min="0" max="5" step="0.1"><br>
+            Siatka:
+            <input type="checkbox" id="grid" checked><br>
+            Linijka:
+            <input type="checkbox" id="crosshair" checked><br>
+            <hr>
+            <h4>Informacje</h4>
+            Ilość wierzchołków: <span id="verticesCount">0</span><br>
+            Ilość trójkątów: <span id="trianglesCount">0</span><br>
+            Ilość akcji: <span id="actionsCount">0</span>
+        </div>
+        <button id="menuButton">Menu</button>
+    </div>
+</body>
+</html>
