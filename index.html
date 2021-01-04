@@ -30,6 +30,7 @@
         #ui {
             position: fixed;
             padding: 5px;
+            max-width: 200px;
         }
         #ui-main {
             background-color: #353b48;
@@ -39,7 +40,7 @@
         hr{
             margin: 5px 0px;
         }
-        #menuButton {
+        .button {
             width: 100%;
         }
         .hidden{
@@ -65,8 +66,13 @@
             Ilość wierzchołków: <span id="verticesCount">0</span><br>
             Ilość trójkątów: <span id="trianglesCount">0</span><br>
             Ilość akcji: <span id="actionsCount">0</span>
+            <hr>
+            <h4>Klawisze</h4>
+            Aby rozpocząć lub zresetować (można dopiero po zakończeniu animacji) kliknij spację.
         </div>
-        <button id="menuButton">Menu</button>
+        <button class="button" id="startAnimationButton">Rozpocznij</button>
+        <button class="button" id="resetButton">Resetuj</button>
+        <button class="button" id="menuButton">Menu</button>
     </div>
 </body>
 </html>

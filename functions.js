@@ -73,6 +73,7 @@ function isPointInTriangle(p, p0, p1, p2) {
 }
 
 function reset() {
+    if (state === "playing") return false;
     polygon = new Polygon(2, 10);
     triangles = [];
     actionsCount = 0;

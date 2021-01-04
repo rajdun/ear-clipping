@@ -9,18 +9,28 @@ class UI{
         this.verticesCountInfo = document.querySelector('#verticesCount');
         this.trianglesCountInfo = document.querySelector('#trianglesCount');
         this.actionsCountInfo = document.querySelector('#actionsCount');
-
         this.uiMain = document.querySelector('#ui-main');
+
         this.uiToggleButton = document.querySelector('#menuButton');
+        this.startButton = document.querySelector('#startAnimationButton');
+        this.resetButton = document.querySelector('#resetButton');
 
-        this.hidden = false;
+        this.visible = true;
 
+        this.startButton.addEventListener('click', ()=>{
+            polygon.triangulate();
+            console.log(123);
+        });
+        this.resetButton.addEventListener('click', ()=>{
+            reset();
+            console.log(312);
+        });
         this.uiToggleButton.addEventListener('click', ()=>{
-            if(this.hidden) {
-                this.hidden = false;
+            if(this.visible) {
+                this.visible = false;
                 this.hide();
             }else{
-                this.hidden = true;
+                this.visible = true;
                 this.show();
             }
         })
@@ -37,7 +47,7 @@ class UI{
     }
 
     getData() {
-        sleepDurationSeconds = Number(this.sleepTimeInput.value);
+        sleepDurationSeconds = 5-Number(this.sleepTimeInput.value);
         b_drawGrid = this.gridInput.checked;
         b_drawCrosshair = this.crosshairInput.checked;
     }

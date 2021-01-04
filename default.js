@@ -9,13 +9,15 @@ const lineWeightLight = 1;
 const dotRadius = 5;
 const windowSizeRatio = window.innerWidth/window.innerHeight;
 
-let state = "drawing";
+let state = "drawing"; // drawing, playing, finished
 let ui;
 let sleepDurationSeconds = .5;
 let diagonal = new Line(0,0,0,0);
 let triangles = [];
 let actionsCount = 0;
 let verticesCount = 0;
+let clickCooldown = 0.1;
+let lastClick = 0;
 
 let b_drawGrid = true;
 let b_drawCrosshair = true;
